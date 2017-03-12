@@ -1,0 +1,11 @@
+" Install plugins using Pathogen
+
+Plug 'delimitMate'
+Plug 'javascript-libraries-syntax'
+Plug 'vim-airline'
+Plug 'vim-javascript'
+Plug 'vim-javascript-syntax'
+Plug 'vim-vim-polyglot'
+
+" Theme – vim-distinguished
+" https://github.com/Lokaltog/vim-distinguished
