@@ -1,5 +1,29 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "13d7678a-d5ad-4feb-a168-c17a2b1daed5"
+  "atom-material-ui":
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "background-tips"
       "exception-reporting"
@@ -8,19 +32,26 @@
     followSymlinks: false
     hideGitIgnoredFiles: true
     ignoredNames: [
-      ".bundle"
+      ".DS_Store"
       ".git"
+      ".idea"
+      ".iron"
+      ".hg"
+      ".svn"
       "log"
       "repositories"
       "tmp"
       "vendor"
     ]
+    openEmptyEditorOnStart: false
     telemetryConsent: "no"
     themes: [
-      "unity-ui"
-      "glacier-syntax"
+      "atom-material-ui"
+      "base16-tomorrow-dark-theme"
     ]
+    useCustomTitleBar: true
   editor:
+    atomicSoftTabs: false
     fontFamily: "Menlo"
     fontSize: 15
     invisibles: {}
@@ -30,6 +61,8 @@
     panelDisplayMode: "closed"
   "linter-eslint":
     useGlobalEslint: true
+  nuclide:
+    "nuclide-flow": {}
   "release-notes":
     viewedVersion: "0.89.0"
   "spell-check":
@@ -39,5 +72,9 @@
       "text.git-commit"
       "text.html.basic"
     ]
+  "tree-view":
+    alwaysOpenExisting: true
+    focusOnReveal: false
+    hideIgnoredNames: true
   welcome:
     showOnStartup: false
