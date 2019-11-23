@@ -9,6 +9,14 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        ls = log --no-merges --oneline master..
+        ls-master = log --oneline
+        caa = commit -a --amend -C HEAD
+        wow = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+        diff-text = diff --color-words
+        shorty = status --short --branch
+        aliases = condif --get-regexp alias
+        standup = log --all --no-merges --graph --date=relative --committer=$(git config --get user.email) --pretty=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --since="$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi)"
 [color]
         diff = auto
         status = auto
@@ -17,6 +25,8 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+[credential]
+        helper = osxkeychain
 [apply]
         whitespace = nowarn
 [mergetool]
